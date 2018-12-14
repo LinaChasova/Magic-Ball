@@ -13,8 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var ballImage: UIImageView!
     var ballImageNumber : Int = 0
     
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        displayImage()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayImage()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
